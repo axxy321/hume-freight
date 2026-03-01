@@ -1,15 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import ThreeScene from './ThreeScene';
+import AnoAI from './ui/animated-shader-background';
 import './Hero.css';
 
 const Hero = () => {
     return (
         <section className="hero">
-            <div className="hero-background">
-                <div className="gradient-overlay"></div>
-                <ThreeScene />
+            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+                <AnoAI />
+            </div>
+            <div className="hero-background relative z-10 pointer-events-none">
+                <div className="gradient-overlay opacity-80"></div>
 
                 {/* Sexy Animated Truck Layer */}
                 <motion.div
