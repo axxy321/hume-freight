@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { supabase } from './lib/supabaseClient';
-import Hero from './components/Hero';
+import AnimatedHeroDemo from './components/AnimatedHeroDemo';
 import Services from './components/Services';
 import About from './components/About';
 import FAQ from './components/FAQ';
@@ -10,7 +10,6 @@ import Navbar from './components/Navbar';
 import QuoteSection from './components/QuoteSection';
 import AdminLogin from './components/admin/AdminLogin';
 import AdminDashboard from './components/admin/AdminDashboard';
-import AnimatedHeroDemo from './components/AnimatedHeroDemo';
 import './index.css';
 
 const MainSite = () => {
@@ -18,7 +17,7 @@ const MainSite = () => {
     <div className="app-container">
       <Navbar />
       <main>
-        <Hero />
+        <AnimatedHeroDemo />
         <About />
         <Services />
         <QuoteSection />
