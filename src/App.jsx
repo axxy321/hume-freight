@@ -10,7 +10,6 @@ import Navbar from './components/Navbar';
 import QuoteSection from './components/QuoteSection';
 import AdminLogin from './components/admin/AdminLogin';
 import AdminDashboard from './components/admin/AdminDashboard';
-import DemoOne from './components/DemoOne';
 import './index.css';
 
 const MainSite = () => {
@@ -66,7 +65,6 @@ function App() {
             <AdminDashboard />
           </ProtectedRoute>
         } />
-        <Route path="/demo-one" element={<DemoOne />} />
       </Routes>
     </Router>
   );
