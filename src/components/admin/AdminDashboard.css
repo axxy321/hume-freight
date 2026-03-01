@@ -1,0 +1,184 @@
+.admin-dashboard {
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    padding-bottom: 50px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid var(--border-color);
+    background: rgba(10, 10, 10, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    transition: var(--transition-fast);
+}
+
+.logout-btn:hover {
+    color: #ef4444;
+    /* red for logout */
+}
+
+.dashboard-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.quote-count {
+    background-color: rgba(194, 155, 87, 0.1);
+    color: var(--accent-primary);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(194, 155, 87, 0.3);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.quote-card {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: var(--transition-fast);
+}
+
+.quote-card:hover {
+    border-color: var(--text-tertiary);
+    transform: translateY(-2px);
+}
+
+.quote-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.quote-card-header h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--accent-primary);
+}
+
+.quote-date {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+}
+
+.quote-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-label {
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detail-value {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.quote-message {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.quote-message p {
+    margin-top: 5px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.quote-card-actions {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.delete-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: var(--transition-fast);
+}
+
+.delete-btn:hover {
+    color: #ef4444;
+}
+
+@media (max-width: 768px) {
+    .quotes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

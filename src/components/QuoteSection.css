@@ -1,0 +1,179 @@
+.quote-section {
+    background-color: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.contact-details {
+    padding-right: 40px;
+}
+
+.contact-header {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.contact-header .section-title {
+    font-size: 2.8rem;
+    margin-top: 10px;
+}
+
+.title-underline {
+    height: 3px;
+    width: 60px;
+    background-color: var(--accent-primary);
+    margin-top: 20px;
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    flex-shrink: 0;
+    transition: var(--transition-normal);
+}
+
+.contact-item:hover .contact-icon {
+    background-color: var(--accent-primary);
+}
+
+.contact-item:hover .contact-icon svg {
+    color: var(--bg-primary);
+}
+
+.contact-text h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.contact-text p {
+    color: var(--text-secondary);
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+/* Quote Form Right Side */
+.quote-form-wrapper {
+    padding: 50px;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+.form-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    transition: var(--transition-fast);
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-primary);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-tertiary);
+    font-weight: 300;
+}
+
+.submit-btn {
+    margin-top: 10px;
+    width: 140px;
+}
+
+.success-message {
+    padding: 40px;
+    background-color: rgba(194, 155, 87, 0.1);
+    border: 1px solid var(--accent-primary);
+    text-align: center;
+}
+
+.success-message h3 {
+    color: var(--accent-primary);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.success-message p {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 968px) {
+    .quote-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .contact-details {
+        padding-right: 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-form-wrapper {
+        padding: 30px;
+    }
+}

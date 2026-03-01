@@ -1,0 +1,192 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(10, 10, 10, 0.9) 0%,
+            rgba(10, 10, 10, 0.7) 40%,
+            rgba(10, 10, 10, 0.3) 100%),
+        linear-gradient(to bottom,
+            rgba(10, 10, 10, 0.4) 0%,
+            rgba(10, 10, 10, 0) 50%,
+            rgba(10, 10, 10, 0.9) 100%);
+    z-index: 1;
+}
+
+.bg-image {
+    display: none;
+    /* Removing static bg to let stars and animated truck shine */
+}
+
+/* New Animated Truck Layer */
+.hero-animated-truck-wrapper {
+    position: absolute;
+    right: -5%;
+    top: 10%;
+    width: 60%;
+    height: 90%;
+    z-index: 2;
+    /* Over stars, under text gradient */
+    pointer-events: none;
+    /* So it doesn't block clicks */
+}
+
+.hero-truck-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Create a slick dark fade so it blends perfectly into the starry void */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%), linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent 0%, black 40%), linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-composite: intersect;
+    opacity: 0.8;
+    filter: brightness(0.9) contrast(1.2) grayscale(20%);
+}
+
+@keyframes slowPan {
+    from {
+        transform: scale(1.05) translateX(0);
+    }
+
+    to {
+        transform: scale(1.1) translateX(-2%);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.hero-text-wrapper {
+    max-width: 700px;
+}
+
+.kicker {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.hero-title .accent-text {
+    font-weight: 600;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 50px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 80px;
+    padding: 30px 50px;
+    width: fit-content;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-value {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-tertiary);
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background-color: var(--glass-border);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 20px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .stat-divider {
+        display: none;
+    }
+
+    .hero-animated-truck-wrapper {
+        width: 100%;
+        height: 60%;
+        top: auto;
+        bottom: 0;
+        right: 0;
+        opacity: 0.4 !important;
+        /* Make it more subtle so text is easily readable */
+        -webkit-mask-image: linear-gradient(to top, transparent 0%, black 50%, transparent 100%);
+        mask-image: linear-gradient(to top, transparent 0%, black 50%, transparent 100%);
+    }
+}
