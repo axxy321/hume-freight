@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import QuoteSection from './components/QuoteSection';
 import AdminLogin from './components/admin/AdminLogin';
 import AdminDashboard from './components/admin/AdminDashboard';
+import AnimatedHeroDemo from './components/AnimatedHeroDemo';
 import './index.css';
 
 const MainSite = () => {
@@ -65,6 +66,7 @@ function App() {
             <AdminDashboard />
           </ProtectedRoute>
         } />
+        <Route path="/hero-demo" element={<AnimatedHeroDemo />} />
       </Routes>
     </Router>
   );
