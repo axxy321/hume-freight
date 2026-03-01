@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { supabase } from './lib/supabaseClient';
-import AnimatedHeroDemo from './components/AnimatedHeroDemo';
+import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
 import FAQ from './components/FAQ';
@@ -17,7 +17,7 @@ const MainSite = () => {
     <div className="app-container">
       <Navbar />
       <main>
-        <AnimatedHeroDemo />
+        <Hero />
         <About />
         <Services />
         <QuoteSection />
@@ -65,7 +65,6 @@ function App() {
             <AdminDashboard />
           </ProtectedRoute>
         } />
-        <Route path="/hero-demo" element={<AnimatedHeroDemo />} />
       </Routes>
     </Router>
   );
