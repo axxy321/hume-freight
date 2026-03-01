@@ -19,11 +19,14 @@
 .admin-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+}
+
+.admin-dashboard-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: screen;
+    filter: brightness(1.2) contrast(1.1);
 }
 
 .logout-btn {

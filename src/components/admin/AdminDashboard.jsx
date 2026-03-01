@@ -66,8 +66,7 @@ const AdminDashboard = () => {
         <div className="admin-dashboard">
             <header className="admin-header glass-panel">
                 <div className="admin-logo">
-                    <PlaneTakeoff size={28} className="accent-text" />
-                    <span>HUME<span className="fw-300">ADMIN</span></span>
+                    <img src="/images/logo.jpg" alt="Hume Freight Admin" className="admin-dashboard-logo" />
                 </div>
                 <button onClick={handleLogout} className="logout-btn">
                     <LogOut size={18} />
