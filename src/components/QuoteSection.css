@@ -26,9 +26,9 @@
 }
 
 .title-underline {
-    height: 4px;
+    height: 3px;
     width: 60px;
-    background: linear-gradient(90deg, #d42e2e, #0f1b3d);
+    background-color: var(--accent-primary);
     margin-top: 20px;
     border-radius: 2px;
 }
@@ -36,21 +36,13 @@
 .contact-info-list {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 35px;
 }
 
 .contact-item {
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    padding: 16px;
-    border-radius: 10px;
-    transition: var(--transition-normal);
-}
-
-.contact-item:hover {
-    background: var(--bg-primary);
-    box-shadow: 0 4px 15px rgba(15, 27, 61, 0.06);
 }
 
 .contact-icon {
@@ -59,17 +51,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 8px;
     flex-shrink: 0;
     transition: var(--transition-normal);
-    background-color: rgba(212, 46, 46, 0.08);
-    color: #d42e2e;
+    background-color: var(--bg-tertiary);
+    color: var(--navy);
 }
 
 .contact-item:hover .contact-icon {
     background-color: var(--accent-primary);
     color: #ffffff;
-    transform: scale(1.05);
 }
 
 .contact-item:hover .contact-icon svg {
@@ -95,21 +86,8 @@
     padding: 50px;
     background-color: var(--bg-primary);
     border: 1px solid var(--border-color);
-    border-radius: 16px;
+    border-radius: 12px;
     box-shadow: 0 10px 40px rgba(15, 27, 61, 0.06);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Red top accent on form card */
-.quote-form-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #d42e2e, #0f1b3d);
 }
 
 .form-title {
@@ -141,21 +119,19 @@
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 500;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 14px 16px;
+    padding: 15px;
     background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
     font-family: var(--font-body);
     transition: var(--transition-fast);
     outline: none;
-    border-radius: 8px;
-    font-size: 0.95rem;
+    border-radius: 6px;
 }
 
 .form-group input:focus,
@@ -173,16 +149,15 @@
 
 .submit-btn {
     margin-top: 10px;
-    width: 160px;
-    border-radius: 8px;
+    width: 140px;
 }
 
 .success-message {
     padding: 40px;
-    background-color: rgba(212, 46, 46, 0.04);
+    background-color: rgba(212, 46, 46, 0.06);
     border: 1px solid var(--accent-primary);
     text-align: center;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .success-message h3 {
