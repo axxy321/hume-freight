@@ -44,7 +44,8 @@ const Hero = () => {
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
                     <motion.span
-                        className="kicker text-gradient"
+                        className="kicker"
+                        style={{ color: 'rgba(255,255,255,0.6)', letterSpacing: '5px' }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3 }}
@@ -53,7 +54,7 @@ const Hero = () => {
                     </motion.span>
                     <h1 className="hero-title">
                         Direct Access to <br />
-                        <span className="accent-text">Premium Freight</span>
+                        <span style={{ fontWeight: 700, color: '#ffffff' }}>Premium Freight</span>
                     </h1>
                     <motion.p
                         className="hero-subtitle"
@@ -95,7 +96,7 @@ const Hero = () => {
                     </div>
                     <div className="stat-divider"></div>
                     <div className="stat">
-                        <span className="stat-value text-gradient">100%</span>
+                        <span className="stat-value">100%</span>
                         <span className="stat-label">Coverage</span>
                     </div>
                     <div className="stat-divider"></div>
