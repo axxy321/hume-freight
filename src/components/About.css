@@ -16,6 +16,7 @@
     line-height: 1.8;
     margin-bottom: 25px;
     font-weight: 300;
+    color: var(--text-secondary);
 }
 
 .text-secondary {
@@ -37,6 +38,7 @@
     font-family: var(--font-heading);
     font-size: 1.1rem;
     font-weight: 300;
+    color: var(--text-primary);
 }
 
 .mt-40 {
@@ -48,7 +50,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
 .cta-title {
@@ -70,6 +74,7 @@
     position: absolute;
     object-fit: cover;
     transition: var(--transition-slow);
+    border-radius: 8px;
 }
 
 .main-img {
@@ -77,8 +82,8 @@
     right: 0;
     width: 80%;
     height: 80%;
-    filter: grayscale(40%) contrast(1.1);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    filter: contrast(1.05);
+    box-shadow: 0 30px 60px rgba(15, 27, 61, 0.15);
 }
 
 .overlay-img {
@@ -86,20 +91,17 @@
     left: 0;
     width: 60%;
     height: 60%;
-    border: 10px solid var(--bg-primary);
+    border: 8px solid var(--bg-primary);
     padding: 0;
-    /* Remove padding inherited from glass-panel */
-    filter: grayscale(20%);
+    box-shadow: 0 20px 40px rgba(15, 27, 61, 0.12);
 }
 
 .image-stack:hover .main-img {
     transform: translateY(-15px) scale(1.02);
-    filter: grayscale(0%);
 }
 
 .image-stack:hover .overlay-img {
     transform: translateY(-5px) scale(1.05) translateX(10px);
-    filter: grayscale(0%);
 }
 
 

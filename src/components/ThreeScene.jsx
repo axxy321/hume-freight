@@ -19,7 +19,7 @@ const ParticleSphere = (props) => {
             <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
                 <PointMaterial
                     transparent
-                    color="#c29b57" /* Accent Gold */
+                    color="#ffffff" /* White particles */
                     size={0.005}
                     sizeAttenuation={true}
                     depthWrite={false}

@@ -46,7 +46,7 @@ const Footer = () => {
                     <div className="footer-contact animate-on-scroll delay-300">
                         <h4 className="footer-heading">Get an Instant Quote</h4>
                         <p className="mb-20">Contact our operations center for immediate assistance.</p>
-                        <a href="mailto:operations@humefreight.com.au" className="contact-link text-gradient">
+                        <a href="mailto:operations@humefreight.com.au" className="contact-link text-gradient-light">
                             operations@humefreight.com.au
                         </a>
                         <div className="hotline mt-20">

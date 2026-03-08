@@ -44,7 +44,7 @@ const ProtectedRoute = ({ children }) => {
   }, []);
 
   if (isAuthenticated === null) {
-    return <div className="loading-auth" style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0a0a0a', color: '#ffcc00' }}>Authenticating...</div>; // Show a loading state while checking session
+    return <div className="loading-auth" style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', color: '#0f1b3d' }}>Authenticating...</div>;
   }
 
   if (!isAuthenticated) {

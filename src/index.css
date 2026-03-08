@@ -1,21 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #121212;
-  --bg-tertiary: #1a1a1a;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f6fa;
+  --bg-tertiary: #eaeff5;
 
-  --text-primary: #ffffff;
-  --text-secondary: #a3a3a3;
-  --text-tertiary: #737373;
+  --text-primary: #0f1b3d;
+  --text-secondary: #5a6a85;
+  --text-tertiary: #8a9ab5;
 
-  --accent-primary: #c29b57;
-  /* Gold/Amber for luxury feel */
-  --accent-primary-hover: #d4a95e;
+  --accent-primary: #d42e2e;
+  /* Logo Red */
+  --accent-primary-hover: #b52222;
 
-  --border-color: rgba(255, 255, 255, 0.1);
-  --glass-bg: rgba(20, 20, 20, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.05);
+  --navy: #0f1b3d;
+  --navy-light: #1a2e5a;
+
+  --border-color: rgba(15, 27, 61, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(15, 27, 61, 0.08);
 
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -73,7 +76,14 @@ ul {
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #fff, var(--text-secondary));
+  background: linear-gradient(90deg, var(--accent-primary), var(--navy));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-light {
+  background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.7));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -89,7 +99,6 @@ ul {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: 1px;
-  /* Sharp, modern edges or subtle radius */
 }
 
 /* Animations */
@@ -134,27 +143,28 @@ ul {
   transition: var(--transition-normal);
   cursor: pointer;
   border: 1px solid transparent;
+  border-radius: 4px;
 }
 
 .btn-primary {
   background-color: var(--accent-primary);
-  color: #000;
+  color: #ffffff;
   font-weight: 600;
 }
 
 .btn-primary:hover {
   background-color: var(--accent-primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(194, 155, 87, 0.2);
+  box-shadow: 0 10px 20px rgba(212, 46, 46, 0.25);
 }
 
 .btn-outline {
   background-color: transparent;
-  border-color: var(--text-primary);
-  color: var(--text-primary);
+  border-color: var(--navy);
+  color: var(--navy);
 }
 
 .btn-outline:hover {
-  background-color: var(--text-primary);
-  color: var(--bg-primary);
+  background-color: var(--navy);
+  color: #ffffff;
 }

@@ -3,18 +3,17 @@
     align-items: center;
     cursor: pointer;
     background: transparent;
-    /* Remove white bg as requested */
 }
 
 /* Ensure the image scales neatly */
 .logo-image {
     height: 48px;
-    /* Base height for navbar */
     max-width: 100%;
     object-fit: contain;
-    mix-blend-mode: multiply;
-    filter: brightness(1.2) contrast(1.1);
-    /* Enhance visibility on dark background */
+}
+
+.footer .logo-image {
+    filter: brightness(0) invert(1);
 }
 
 /* Adjust sizes for mobile */

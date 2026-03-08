@@ -1,5 +1,5 @@
 .quote-section {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     position: relative;
     overflow: hidden;
 }
@@ -30,6 +30,7 @@
     width: 60px;
     background-color: var(--accent-primary);
     margin-top: 20px;
+    border-radius: 2px;
 }
 
 .contact-info-list {
@@ -50,17 +51,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
+    border-radius: 8px;
     flex-shrink: 0;
     transition: var(--transition-normal);
+    background-color: var(--bg-tertiary);
+    color: var(--navy);
 }
 
 .contact-item:hover .contact-icon {
     background-color: var(--accent-primary);
+    color: #ffffff;
 }
 
 .contact-item:hover .contact-icon svg {
-    color: var(--bg-primary);
+    color: #ffffff;
 }
 
 .contact-text h3 {
@@ -68,6 +72,7 @@
     margin-bottom: 5px;
     font-family: var(--font-heading);
     letter-spacing: 1px;
+    color: var(--text-primary);
 }
 
 .contact-text p {
@@ -79,13 +84,16 @@
 /* Quote Form Right Side */
 .quote-form-wrapper {
     padding: 50px;
-    background-color: var(--bg-tertiary);
+    background-color: var(--bg-primary);
     border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(15, 27, 61, 0.06);
 }
 
 .form-title {
     font-size: 2rem;
     margin-bottom: 30px;
+    color: var(--text-primary);
 }
 
 .quote-form {
@@ -117,18 +125,20 @@
 .form-group textarea {
     width: 100%;
     padding: 15px;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
     font-family: var(--font-body);
     transition: var(--transition-fast);
     outline: none;
+    border-radius: 6px;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--accent-primary);
-    background-color: rgba(255, 255, 255, 0.02);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(212, 46, 46, 0.08);
 }
 
 .form-group input::placeholder,
@@ -144,9 +154,10 @@
 
 .success-message {
     padding: 40px;
-    background-color: rgba(194, 155, 87, 0.1);
+    background-color: rgba(212, 46, 46, 0.06);
     border: 1px solid var(--accent-primary);
     text-align: center;
+    border-radius: 8px;
 }
 
 .success-message h3 {
