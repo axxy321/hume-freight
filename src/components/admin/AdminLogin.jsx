@@ -40,7 +40,7 @@ const AdminLogin = () => {
         <div className="admin-login-page">
             <div className="admin-login-container glass-panel">
                 <div className="admin-login-header">
-                    <img src="/images/logo.jpg" alt="Hume Freight Admin" className="admin-portal-logo" />
+                    <img src="/images/logo.png" alt="Hume Freight Admin" className="admin-portal-logo" />
                     <h2>Admin <span className="fw-300">Portal</span></h2>
                     <p>Restricted Access Area</p>
                 </div>

@@ -5,7 +5,7 @@ const Logo = () => {
     return (
         <div className="custom-logo">
             <img
-                src="/images/logo.jpg"
+                src="/images/logo.png"
                 alt="Hume Freight Logo"
                 className="logo-image"
             />
