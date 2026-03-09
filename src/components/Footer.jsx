@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Linkedin, Twitter } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Logo from './Logo';
 import './Footer.css';
 
@@ -9,7 +10,13 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-grid">
 
-                    <div className="footer-brand animate-on-scroll">
+                    <motion.div
+                        className="footer-brand"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.1 }}
+                        transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
+                    >
                         <a href="/" className="mb-20" style={{ display: 'inline-block', textDecoration: 'none' }}>
                             <Logo />
                         </a>
@@ -21,9 +28,15 @@ const Footer = () => {
                             <a href="#" className="social-icon"><Twitter size={20} /></a>
                             <a href="#" className="social-icon"><Instagram size={20} /></a>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="footer-links animate-on-scroll delay-100">
+                    <motion.div
+                        className="footer-links"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.1 }}
+                        transition={{ duration: 0.6, delay: 0.1, type: "spring", stiffness: 100, damping: 20 }}
+                    >
                         <h4 className="footer-heading">Services</h4>
                         <ul>
                             <li><a href="#">Air Cargo</a></li>
@@ -31,9 +44,15 @@ const Footer = () => {
                             <li><a href="#">Road Transport</a></li>
                             <li><a href="#">Express Courier</a></li>
                         </ul>
-                    </div>
+                    </motion.div>
 
-                    <div className="footer-links animate-on-scroll delay-200">
+                    <motion.div
+                        className="footer-links"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.1 }}
+                        transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 100, damping: 20 }}
+                    >
                         <h4 className="footer-heading">Company</h4>
                         <ul>
                             <li><a href="#">About Us</a></li>
@@ -41,9 +60,15 @@ const Footer = () => {
                             <li><a href="#">Careers</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                         </ul>
-                    </div>
+                    </motion.div>
 
-                    <div className="footer-contact animate-on-scroll delay-300">
+                    <motion.div
+                        className="footer-contact"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.1 }}
+                        transition={{ duration: 0.6, delay: 0.3, type: "spring", stiffness: 100, damping: 20 }}
+                    >
                         <h4 className="footer-heading">Get an Instant Quote</h4>
                         <p className="mb-20">Contact our operations center for immediate assistance.</p>
                         <a href="mailto:operations@humefreight.com.au" className="contact-link text-gradient-light">
@@ -53,7 +78,7 @@ const Footer = () => {
                             <span className="kicker accent-text">24/7 Hotline</span>
                             <p className="footer-phone">+61 1300 123 456</p>
                         </div>
-                    </div>
+                    </motion.div>
 
                 </div>
 

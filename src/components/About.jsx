@@ -10,10 +10,10 @@ const About = () => {
                 <div className="about-grid">
                     <motion.div
                         className="about-content"
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         <span className="kicker accent-text">The Hume Freight Heritage</span>
                         <h2 className="section-title">

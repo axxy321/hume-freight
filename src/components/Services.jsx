@@ -64,10 +64,10 @@ const Services = () => {
             <div className="container">
                 <motion.div
                     className="services-header-centered"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
                 >
                     <span className="kicker accent-text">Our Capabilities</span>
                     <h2 className="section-title">Services - <span className="text-gradient">Hume Freight</span></h2>
@@ -79,20 +79,20 @@ const Services = () => {
 
                             <motion.div
                                 className="service-image-container"
-                                initial={{ opacity: 0, x: service.imageLeft ? -50 : 50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, x: service.imageLeft ? -50 : 50, scale: 0.95 }}
+                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
                                 viewport={{ once: true, amount: 0.3 }}
-                                transition={{ duration: 0.8 }}
+                                transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
                             >
                                 <img src={service.img} alt={service.title} className="service-featured-img" />
                             </motion.div>
 
                             <motion.div
                                 className="service-text-content"
-                                initial={{ opacity: 0, x: service.imageLeft ? 50 : -50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, x: service.imageLeft ? 50 : -50, scale: 0.95 }}
+                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
                                 viewport={{ once: true, amount: 0.3 }}
-                                transition={{ duration: 0.8, delay: 0.2 }}
+                                transition={{ duration: 0.8, delay: 0.1, type: "spring", stiffness: 100, damping: 20 }}
                             >
                                 <h3 className="service-row-title">{service.title}</h3>
                                 <p className="service-row-desc">{service.description}</p>

@@ -60,10 +60,10 @@ const QuoteSection = () => {
                     {/* Left Side: Contact Details */}
                     <motion.div
                         className="contact-details"
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         <div className="contact-header">
                             <span className="kicker">HUME FREIGHT</span>
@@ -117,10 +117,10 @@ const QuoteSection = () => {
                     {/* Right Side: Quote Form */}
                     <motion.div
                         className="quote-form-wrapper glass-panel"
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        transition={{ duration: 0.8, delay: 0.1, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         <h2 className="form-title">Get A Free Quote</h2>
 

@@ -12,8 +12,11 @@
     object-fit: contain;
 }
 
-.footer .logo-image {
-    filter: brightness(0) invert(1);
+.footer .custom-logo {
+    background: #ffffff;
+    padding: 8px 16px;
+    border-radius: 0;
+    display: inline-flex;
 }
 
 /* Adjust sizes for mobile */

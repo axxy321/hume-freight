@@ -39,10 +39,10 @@ const FAQ = () => {
                 <div className="faq-grid">
                     <motion.div
                         className="faq-header"
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         <span className="kicker">Knowledge Base</span>
                         <h2 className="section-title">
@@ -58,10 +58,10 @@ const FAQ = () => {
 
                     <motion.div
                         className="faq-list"
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        transition={{ duration: 0.8, delay: 0.1, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         {faqs.map((faq, index) => (
                             <div
