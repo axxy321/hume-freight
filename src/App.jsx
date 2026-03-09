@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { supabase } from './lib/supabaseClient';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import Testimonials from './components/Testimonials';
 import About from './components/About';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -21,6 +22,7 @@ const MainSite = () => {
         <Hero />
         <About />
         <Services />
+        <Testimonials />
         <Locations />
         <QuoteSection />
         <FAQ />

@@ -1,0 +1,140 @@
+.testimonials-section {
+    background-color: var(--navy);
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+}
+
+.testimonials-header-centered {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    color: #ffffff;
+}
+
+/* Kicker color specifically for the dark background */
+.testimonials-section .kicker {
+    color: var(--accent-primary);
+}
+
+.testimonials-section .section-title {
+    color: #ffffff;
+}
+
+.testimonials-section .text-gradient {
+    /* Using lighter gradient to pop off the navy */
+    background: linear-gradient(90deg, #ffffff, var(--text-tertiary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Infinity Slider Container */
+.testimonials-slider-container {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+    padding: 20px 0;
+
+    /* Elegant gradient fade on the edges so cards smoothly disappear */
+    mask-image: linear-gradient(to right,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent);
+    -webkit-mask-image: linear-gradient(to right,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent);
+}
+
+.testimonials-track {
+    display: flex;
+    gap: 30px;
+    /* Sufficient width to line up all duplicates without wrapping */
+    width: max-content;
+}
+
+/* Glassmorphic Review Card */
+.testimonial-card {
+    width: 400px;
+    flex-shrink: 0;
+
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonial-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Sleek minimal avatar circle */
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--navy-light);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.user-info h4 {
+    color: var(--navy);
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.user-info span {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.google-logo {
+    width: 24px;
+    height: 24px;
+}
+
+.stars {
+    display: flex;
+    gap: 4px;
+    color: #fbbc04;
+    /* Google Red/Yellow Star color */
+}
+
+.testimonial-body {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 320px;
+        padding: 25px;
+    }
+}
