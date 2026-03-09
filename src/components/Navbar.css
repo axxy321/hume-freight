@@ -9,16 +9,16 @@
 }
 
 .navbar.scrolled {
-    padding: 15px 0;
-    background: rgba(255, 255, 255, 0.85);
-    /* Slightly more transparent */
-    backdrop-filter: blur(20px);
-    /* Doubled blur for heavy glass look */
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    /* Crisper bottom border */
-    box-shadow: 0 10px 30px rgba(15, 27, 61, 0.08);
-    /* Broader shadow */
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.7);
+    /* Much more transparent glass */
+    backdrop-filter: blur(24px);
+    /* Extreme professional blur */
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    /* Crisp top-layer shine */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+    /* Multi-layered dynamic physical shadow */
 }
 
 /* Logo visible on dark hero with white bg */
@@ -31,13 +31,14 @@
     transform: scale(1);
 }
 
-/* Logo scaled beautifully on down-scroll inside white glass */
+/* Logo perfectly blended transparently on down-scroll inside white glass */
 .navbar.scrolled .custom-logo {
-    background: #ffffff;
-    padding: 4px 12px;
+    background: transparent;
+    padding: 0;
     border-radius: 0;
     box-shadow: none;
-    transform: scale(0.9);
+    transform: scale(0.85);
+    transform-origin: left center;
     transition: all var(--transition-normal);
 }
 
