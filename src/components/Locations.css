@@ -1,0 +1,114 @@
+.locations-section {
+    background-color: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.locations-header-centered {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.location-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(15, 27, 61, 0.05);
+    transition: var(--transition-normal);
+    background: #ffffff;
+}
+
+.location-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.location-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.location-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 27, 61, 0.12);
+}
+
+.location-card:hover .location-img {
+    transform: scale(1.08);
+}
+
+/* Glassmorphic Overlay for Text */
+.location-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-normal);
+}
+
+.location-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: var(--transition-fast);
+}
+
+.location-arrow {
+    color: var(--accent-primary);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.location-card:hover .location-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.location-card:hover .location-title {
+    color: var(--accent-primary);
+}
+
+.location-card:hover .location-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .locations-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .location-image-wrapper {
+        height: 250px;
+    }
+}

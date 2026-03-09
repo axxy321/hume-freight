@@ -6,6 +6,7 @@ import Services from './components/Services';
 import About from './components/About';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import Locations from './components/Locations';
 import Navbar from './components/Navbar';
 import QuoteSection from './components/QuoteSection';
 import AdminLogin from './components/admin/AdminLogin';
@@ -20,6 +21,7 @@ const MainSite = () => {
         <Hero />
         <About />
         <Services />
+        <Locations />
         <QuoteSection />
         <FAQ />
       </main>
