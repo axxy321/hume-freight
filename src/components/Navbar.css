@@ -42,6 +42,11 @@
     transition: all var(--transition-normal);
 }
 
+/* Erase the white JPG background so the ink floats natively */
+.navbar.scrolled .custom-logo img {
+    mix-blend-mode: multiply;
+}
+
 .navbar.scrolled .nav-link {
     color: var(--text-primary);
 }
