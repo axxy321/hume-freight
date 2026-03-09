@@ -22,9 +22,9 @@ const MainSite = () => {
       <main>
         <Hero />
         <About />
-        <Partners />
-        <Services />
         <Testimonials />
+        <Services />
+        <Partners />
         <Locations />
         <QuoteSection />
         <FAQ />
