@@ -6,22 +6,22 @@ const LOCATIONS = [
     {
         id: 'brisbane',
         name: 'Brisbane',
-        img: '/images/locations/brisbane.jpg',
+        img: '/images/locations/brisbane.png',
     },
     {
         id: 'gold-coast',
         name: 'Gold Coast',
-        img: '/images/locations/gold-coast.jpg',
+        img: '/images/locations/gold-coast.png',
     },
     {
         id: 'perth',
         name: 'Perth',
-        img: '/images/locations/perth.jpg',
+        img: '/images/locations/perth.png',
     },
     {
         id: 'adelaide',
         name: 'Adelaide',
-        img: '/images/locations/adelaide.jpg',
+        img: '/images/locations/adelaide.png',
     }
 ];
 
