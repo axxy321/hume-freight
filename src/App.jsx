@@ -4,6 +4,7 @@ import { supabase } from './lib/supabaseClient';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
+import Partners from './components/Partners';
 import About from './components/About';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -21,6 +22,7 @@ const MainSite = () => {
       <main>
         <Hero />
         <About />
+        <Partners />
         <Services />
         <Testimonials />
         <Locations />
