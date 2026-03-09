@@ -58,7 +58,7 @@
     padding: 20px;
     border-radius: 12px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     background: rgba(255, 255, 255, 0.85);
@@ -80,13 +80,6 @@
     transition: var(--transition-fast);
 }
 
-.location-arrow {
-    color: var(--accent-primary);
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
 .location-card:hover .location-content {
     background: rgba(255, 255, 255, 0.95);
     border-color: rgba(255, 255, 255, 1);
@@ -95,11 +88,6 @@
 
 .location-card:hover .location-title {
     color: var(--accent-primary);
-}
-
-.location-card:hover .location-arrow {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 @media (max-width: 768px) {

@@ -1,28 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 import './Locations.css';
 
 const LOCATIONS = [
     {
         id: 'brisbane',
         name: 'Brisbane',
-        img: 'https://images.unsplash.com/photo-1549487271-e77073b64082?auto=format&fit=crop&q=80&w=800',
+        img: '/images/locations/brisbane.jpg',
     },
     {
         id: 'gold-coast',
         name: 'Gold Coast',
-        img: 'https://images.unsplash.com/photo-1517400508447-f8dd518b86db?auto=format&fit=crop&q=80&w=800',
+        img: '/images/locations/gold-coast.jpg',
     },
     {
         id: 'perth',
         name: 'Perth',
-        img: 'https://images.unsplash.com/photo-1558223637-25ea8cc887c2?auto=format&fit=crop&q=80&w=800',
+        img: '/images/locations/perth.jpg',
     },
     {
         id: 'adelaide',
         name: 'Adelaide',
-        img: 'https://images.unsplash.com/photo-1628168270830-10870f7fe6b5?auto=format&fit=crop&q=80&w=800',
+        img: '/images/locations/adelaide.jpg',
     }
 ];
 
@@ -64,9 +63,6 @@ const Locations = () => {
 
                                 <div className="location-content">
                                     <h3 className="location-title">{location.name}</h3>
-                                    <div className="location-arrow">
-                                        <ArrowRight size={20} />
-                                    </div>
                                 </div>
                             </div>
                         </motion.div>
