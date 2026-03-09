@@ -41,7 +41,7 @@ const FAQ = () => {
                         className="faq-header"
                         initial={{ opacity: 0, y: 40, scale: 0.95 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                        viewport={{ once: true, amount: 0.2 }}
+                        viewport={{ once: false, amount: 0.2 }}
                         transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         <span className="kicker">Knowledge Base</span>
@@ -60,7 +60,7 @@ const FAQ = () => {
                         className="faq-list"
                         initial={{ opacity: 0, y: 40, scale: 0.95 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                        viewport={{ once: true, amount: 0.2 }}
+                        viewport={{ once: false, amount: 0.2 }}
                         transition={{ duration: 0.8, delay: 0.1, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         {faqs.map((faq, index) => (

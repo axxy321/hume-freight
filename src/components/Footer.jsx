@@ -14,7 +14,7 @@ const Footer = () => {
                         className="footer-brand"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.1 }}
+                        viewport={{ once: false, amount: 0.1 }}
                         transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         <a href="/" className="mb-20" style={{ display: 'inline-block', textDecoration: 'none' }}>
@@ -34,7 +34,7 @@ const Footer = () => {
                         className="footer-links"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.1 }}
+                        viewport={{ once: false, amount: 0.1 }}
                         transition={{ duration: 0.6, delay: 0.1, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         <h4 className="footer-heading">Services</h4>
@@ -50,7 +50,7 @@ const Footer = () => {
                         className="footer-links"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.1 }}
+                        viewport={{ once: false, amount: 0.1 }}
                         transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         <h4 className="footer-heading">Company</h4>
@@ -66,7 +66,7 @@ const Footer = () => {
                         className="footer-contact"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.1 }}
+                        viewport={{ once: false, amount: 0.1 }}
                         transition={{ duration: 0.6, delay: 0.3, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         <h4 className="footer-heading">Get an Instant Quote</h4>

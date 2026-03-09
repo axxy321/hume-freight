@@ -12,7 +12,7 @@ const About = () => {
                         className="about-content"
                         initial={{ opacity: 0, y: 40, scale: 0.95 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                        viewport={{ once: true, amount: 0.2 }}
+                        viewport={{ once: false, amount: 0.2 }}
                         transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         <span className="kicker accent-text">The Hume Freight Heritage</span>
@@ -31,7 +31,7 @@ const About = () => {
                                 className="feature-item"
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: false }}
                                 transition={{ delay: 0.2 }}
                             >
                                 <ShieldCheck className="accent-text" size={24} />
@@ -41,7 +41,7 @@ const About = () => {
                                 className="feature-item"
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: false }}
                                 transition={{ delay: 0.4 }}
                             >
                                 <MapPin className="accent-text" size={24} />
@@ -51,7 +51,7 @@ const About = () => {
                                 className="feature-item"
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: false }}
                                 transition={{ delay: 0.6 }}
                             >
                                 <Clock className="accent-text" size={24} />
@@ -63,7 +63,7 @@ const About = () => {
                             className="about-cta glass-panel mt-40"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: false }}
                             transition={{ delay: 0.8 }}
                         >
                             <div className="cta-text">
@@ -78,7 +78,7 @@ const About = () => {
                         className="about-visual"
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true, amount: 0.2 }}
+                        viewport={{ once: false, amount: 0.2 }}
                         transition={{ duration: 1 }}
                     >
                         <div className="image-stack">

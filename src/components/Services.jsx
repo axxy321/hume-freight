@@ -66,7 +66,7 @@ const Services = () => {
                     className="services-header-centered"
                     initial={{ opacity: 0, scale: 0.95, y: 30 }}
                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
                 >
                     <span className="kicker accent-text">Our Capabilities</span>
@@ -81,7 +81,7 @@ const Services = () => {
                                 className="service-image-container"
                                 initial={{ opacity: 0, x: service.imageLeft ? -50 : 50, scale: 0.95 }}
                                 whileInView={{ opacity: 1, x: 0, scale: 1 }}
-                                viewport={{ once: true, amount: 0.3 }}
+                                viewport={{ once: false, amount: 0.3 }}
                                 transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
                             >
                                 <img src={service.img} alt={service.title} className="service-featured-img" />
@@ -91,7 +91,7 @@ const Services = () => {
                                 className="service-text-content"
                                 initial={{ opacity: 0, x: service.imageLeft ? 50 : -50, scale: 0.95 }}
                                 whileInView={{ opacity: 1, x: 0, scale: 1 }}
-                                viewport={{ once: true, amount: 0.3 }}
+                                viewport={{ once: false, amount: 0.3 }}
                                 transition={{ duration: 0.8, delay: 0.1, type: "spring", stiffness: 100, damping: 20 }}
                             >
                                 <h3 className="service-row-title">{service.title}</h3>
