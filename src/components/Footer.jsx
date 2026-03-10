@@ -38,11 +38,11 @@ const Footer = () => {
                         transition={{ duration: 0.6, delay: 0.1, type: "spring", stiffness: 100, damping: 20 }}
                     >
                         <h4 className="footer-heading">Services</h4>
-                        <ul>
-                            <li><a href="#">Air Cargo</a></li>
-                            <li><a href="#">Sea Freight</a></li>
-                            <li><a href="#">Road Transport</a></li>
-                            <li><a href="#">Express Courier</a></li>
+                        <ul className="footer-nav-list">
+                            <li><a href="#services">Air Cargo</a></li>
+                            <li><a href="#services">Sea Freight</a></li>
+                            <li><a href="#services">Road Transport</a></li>
+                            <li><a href="#services">Express Courier</a></li>
                         </ul>
                     </motion.div>
 
@@ -53,12 +53,12 @@ const Footer = () => {
                         viewport={{ once: false, amount: 0.1 }}
                         transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 100, damping: 20 }}
                     >
-                        <h4 className="footer-heading">Company</h4>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our Fleet</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                        <h4 className="footer-heading">Quick Links</h4>
+                        <ul className="footer-nav-list">
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#locations">Locations</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#faq">FAQ</a></li>
                         </ul>
                     </motion.div>
 
@@ -71,6 +71,10 @@ const Footer = () => {
                     >
                         <h4 className="footer-heading">Get an Instant Quote</h4>
                         <p className="mb-20">Contact our operations center for immediate assistance.</p>
+                        <a href="#quote" className="btn btn-primary" style={{ display: 'inline-block', marginBottom: '20px', padding: '10px 20px', fontSize: '0.9rem' }}>
+                            Request Quote
+                        </a>
+                        <br />
                         <a href="mailto:operations@humefreight.com.au" className="contact-link text-gradient-light">
                             operations@humefreight.com.au
                         </a>
