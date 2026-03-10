@@ -6,38 +6,38 @@ import './Testimonials.css';
 const REVIEWS = [
     {
         id: 1,
-        name: "Sarah L.",
-        date: "9 July 2024",
-        initials: "SL",
-        text: "From the moment we booked with Hume Freight, the communication was clear and responsive. They kept us updated every step of the way, and everything arrived on time. Great customer service and fair pricing!"
+        name: "Cameron M.",
+        date: "15 days ago",
+        initials: "CM",
+        text: "Fast service. Great COMMUNICATION- so many freighters lack in this department, but not Hume Freight!! Thanks Guys, appreciate it."
     },
     {
         id: 2,
-        name: "Harjot Singh",
-        date: "December 21, 2023",
-        initials: "HS",
-        text: "The instant online quotations help us to efficiently budget our logistics operations. Extremely easy to use and transparent pricing structure."
+        name: "Russell M.",
+        date: "12 days ago",
+        initials: "RM",
+        text: "Great price and lead-time, would be happy to use again. They stuck to the commitment, delivered on time and in good condition."
     },
     {
         id: 3,
-        name: "James R.",
-        date: "2 July 2023",
-        initials: "JR",
-        text: "Needed a last-minute freight job handled quickly, and Hume Freight came through. Super fast turnaround and very easy to deal with. Will definitely be using them again for future transport needs."
+        name: "Dino",
+        date: "27 days ago",
+        initials: "D",
+        text: "Very reasonable price, picked up and delivered promptly. Definitely happy to use again."
     },
     {
         id: 4,
-        name: "Michael T.",
-        date: "14 July 2024",
-        initials: "MT",
-        text: "We've been using Hume Freight for our business deliveries across Victoria and couldn't be happier. The team is professional, punctual, and always handles our goods with care. Highly recommend them for reliable services."
+        name: "Consie P.",
+        date: "2 months ago",
+        initials: "CP",
+        text: "Great work. Good turnaround on a short timeframe. Very cost effective."
     },
     {
         id: 5,
-        name: "Elena G.",
-        date: "10 August 2024",
-        initials: "EG",
-        text: "Finding a reliable logistics partner was a struggle until we found Hume. Their tracking process and absolute dedication to delivery windows gave our operations team massive peace of mind."
+        name: "Adam B.",
+        date: "2 months ago",
+        initials: "AB",
+        text: "Very efficient and easy to deal with. Highly recommend"
     }
 ];
 
