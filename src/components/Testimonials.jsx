@@ -94,9 +94,11 @@ const Testimonials = () => {
                                             <path d="M1 1h22v22H1z" fill="none" />
                                         </svg>
                                     </div>
-                                    <Star size={16} fill="currentColor" stroke="none" />
-                                    <Star size={16} fill="currentColor" stroke="none" />
-                                    <Star size={16} fill="currentColor" stroke="none" />
+                                    <div className="google-stars" style={{ display: 'flex', gap: '2px', marginLeft: '8px' }}>
+                                        {[1, 2, 3, 4, 5].map((star) => (
+                                            <Star key={star} size={16} fill="#fbbc04" color="#fbbc04" strokeWidth={1} style={{ filter: 'drop-shadow(0 0 2px rgba(251, 188, 4, 0.4))' }} />
+                                        ))}
+                                    </div>
                                 </div>
                                 <div className="testimonial-body">
                                     "{review.text}"
