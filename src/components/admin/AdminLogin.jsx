@@ -36,6 +36,28 @@ const AdminLogin = () => {
         }
     };
 
+    const handleRegister = async (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+        setError('');
+
+        try {
+            const { error } = await supabase.auth.signUp({
+                email: credentials.email,
+                password: credentials.password,
+            });
+
+            if (error) throw error;
+
+            alert("🟢 SUCCESS: New Admin User Created!\n\nEmail: " + credentials.email + "\n\nYou can now log in securely.");
+        } catch (err) {
+            setError(err.message || 'Failed to create user.');
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+
     return (
         <div className="admin-login-page">
             <div className="admin-login-container glass-panel">
@@ -75,9 +97,14 @@ const AdminLogin = () => {
                             <Lock size={18} className="lock-icon" />
                         </div>
                     </div>
-                    <button type="submit" className="btn btn-primary login-btn" disabled={isLoading}>
-                        {isLoading ? 'Authenticating...' : 'Secure Login'}
-                    </button>
+                    <div style={{ display: 'flex', gap: '10px' }}>
+                        <button type="submit" className="btn btn-primary login-btn" disabled={isLoading} style={{ flex: 1 }}>
+                            {isLoading ? 'Authenticating...' : 'Secure Login'}
+                        </button>
+                        <button type="button" onClick={handleRegister} className="btn login-btn" disabled={isLoading} style={{ flex: 1, backgroundColor: '#34A853', color: 'white', border: 'none' }}>
+                            + Create New Admin
+                        </button>
+                    </div>
                 </form>
 
                 <a href="/" className="back-link">← Return to Main Site</a>
