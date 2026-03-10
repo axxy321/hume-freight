@@ -1,39 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import ThreeScene from './ThreeScene';
 import './Hero.css';
 
 const Hero = () => {
     return (
         <section className="hero">
             <div className="hero-background">
-                <div className="gradient-overlay"></div>
-                <ThreeScene />
-
-                {/* Sexy Animated Truck Layer */}
-                <motion.div
-                    className="hero-animated-truck-wrapper"
-                    initial={{ opacity: 0, x: 100, scale: 0.9 }}
-                    animate={{ opacity: 1, x: 0, scale: 1 }}
-                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="hero-video-bg"
                 >
-                    <motion.img
-                        src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2670&auto=format&fit=crop"
-                        alt="Premium Freight Truck"
-                        className="hero-truck-img"
-                        animate={{
-                            x: [0, -40],
-                            scale: [1, 1.05]
-                        }}
-                        transition={{
-                            duration: 20,
-                            repeat: Infinity,
-                            repeatType: 'reverse',
-                            ease: "linear"
-                        }}
-                    />
-                </motion.div>
+                    <source src="/images/hero-truck-video.mp4" type="video/mp4" />
+                </video>
+                <div className="gradient-overlay"></div>
             </div>
 
             <div className="container hero-content">
