@@ -76,9 +76,10 @@ const QuoteSection = () => {
                                 <div className="contact-icon glass-panel">
                                     <Phone size={24} className="accent-text" />
                                 </div>
-                                <div className="contact-text">
-                                    <h3>Phone :</h3>
-                                    <p>+61 1300 123 456</p>
+                                <div className="contact-card">
+                                    <h4>Call Us Instead</h4>
+                                    <p>+61 482 086 541</p>
+                                    <span>Available 24/7 for urgent freight</span>
                                 </div>
                             </div>
 
