@@ -14,7 +14,7 @@ const Hero = () => {
                     playsInline
                     className="hero-video-bg"
                 >
-                    <source src="/images/hero-truck-video-forward-loop.mp4" type="video/mp4" />
+                    <source src="/images/hero-truck-video.mp4" type="video/mp4" />
                 </video>
                 <div className="gradient-overlay"></div>
             </div>
