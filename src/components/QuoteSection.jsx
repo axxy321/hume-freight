@@ -112,7 +112,7 @@ const QuoteSection = () => {
                                 </div>
                                 <div className="contact-text">
                                     <h3>Email :</h3>
-                                    <p>admin@humefreight.com.au</p>
+                                    <p>sales@humefreight.com.au</p>
                                 </div>
                             </div>
 
