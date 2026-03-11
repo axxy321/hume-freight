@@ -44,10 +44,12 @@ const QuoteSection = () => {
 
             // 2. Send auto-reply email to customer via EmailJS
             try {
-                await emailjs.send(
+                const emailResult = await emailjs.send(
                     'service_8sdtyup',
                     'template_v3ich9q',
                     {
+                        to_email: formData.email,
+                        from_name: 'Hume Freight',
                         name: formData.name,
                         phone: formData.phone,
                         email: formData.email,
@@ -56,9 +58,10 @@ const QuoteSection = () => {
                     },
                     'RCxWATwZqmB2EtO0N'
                 );
+                console.log('EmailJS success:', emailResult);
             } catch (emailError) {
-                console.warn('EmailJS auto-reply failed:', emailError);
-                // Don't block the form submission if email fails
+                console.error('EmailJS auto-reply failed:', emailError);
+                alert('Email notification failed: ' + (emailError?.text || JSON.stringify(emailError)));
             }
 
             setSubmitted(true);
