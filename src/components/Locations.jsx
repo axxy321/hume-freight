@@ -9,9 +9,9 @@ const LOCATIONS = [
         img: '/images/locations/brisbane.png',
     },
     {
-        id: 'gold-coast',
-        name: 'Gold Coast',
-        img: '/images/locations/gold-coast.png',
+        id: 'sydney',
+        name: 'Sydney',
+        img: '/images/locations/sydney.png',
     },
     {
         id: 'perth',
