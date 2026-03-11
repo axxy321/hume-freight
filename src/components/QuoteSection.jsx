@@ -45,8 +45,8 @@ const QuoteSection = () => {
             // 2. Send auto-reply email to customer via EmailJS
             try {
                 const emailResult = await emailjs.send(
-                    'service_8sdtyup',
-                    'template_v3ich9q',
+                    'service_7fg1tba',
+                    'template_z5ovzdl',
                     {
                         to_email: formData.email,
                         from_name: 'Hume Freight',
