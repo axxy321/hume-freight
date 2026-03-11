@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { supabase } from '../lib/supabaseClient';
+import emailjs from '@emailjs/browser';
 import './QuoteSection.css';
 
 const QuoteSection = () => {
@@ -26,6 +27,7 @@ const QuoteSection = () => {
         setErrorMsg('');
 
         try {
+            // 1. Save to Supabase database
             const { error } = await supabase
                 .from('quotes')
                 .insert([
@@ -35,11 +37,29 @@ const QuoteSection = () => {
                         email: formData.email,
                         location: formData.location,
                         message: formData.message
-                        // created_at is handled by Supabase default
                     }
                 ]);
 
             if (error) throw error;
+
+            // 2. Send auto-reply email to customer via EmailJS
+            try {
+                await emailjs.send(
+                    'service_8sdtyup',
+                    'template_v3ich9q',
+                    {
+                        name: formData.name,
+                        phone: formData.phone,
+                        email: formData.email,
+                        location: formData.location,
+                        message: formData.message,
+                    },
+                    'RCxWATwZqmB2EtO0N'
+                );
+            } catch (emailError) {
+                console.warn('EmailJS auto-reply failed:', emailError);
+                // Don't block the form submission if email fails
+            }
 
             setSubmitted(true);
             setFormData({ name: '', phone: '', email: '', location: '', message: '' });
