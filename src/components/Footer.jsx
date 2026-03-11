@@ -75,8 +75,8 @@ const Footer = () => {
                             Request Quote
                         </a>
                         <br />
-                        <a href="mailto:operations@humefreight.com.au" className="contact-link text-gradient-light">
-                            operations@humefreight.com.au
+                        <a href="mailto:admin@humefreight.com.au" className="contact-link text-gradient-light">
+                            admin@humefreight.com.au
                         </a>
                         <div className="hotline mt-20">
                             <span className="kicker accent-text">24/7 Hotline</span>
