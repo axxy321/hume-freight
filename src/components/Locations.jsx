@@ -22,6 +22,11 @@ const LOCATIONS = [
         id: 'adelaide',
         name: 'Adelaide',
         img: '/images/locations/adelaide.png',
+    },
+    {
+        id: 'melbourne',
+        name: 'Melbourne',
+        img: '/images/locations/melbourne.png',
     }
 ];
 
