@@ -86,11 +86,13 @@ const About = () => {
                                 src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2670&auto=format&fit=crop"
                                 alt="Australian Road Train"
                                 className="stack-img main-img"
+                                loading="lazy"
                             />
                             <img
                                 src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=800&auto=format&fit=crop"
                                 alt="High value freight"
                                 className="stack-img overlay-img glass-panel"
+                                loading="lazy"
                             />
                         </div>
                     </motion.div>

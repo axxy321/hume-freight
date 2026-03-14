@@ -84,7 +84,7 @@ const Services = () => {
                                 viewport={{ once: false, amount: 0.3 }}
                                 transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
                             >
-                                <img src={service.img} alt={service.title} className="service-featured-img" />
+                                <img src={service.img} alt={service.title} className="service-featured-img" loading="lazy" />
                             </motion.div>
 
                             <motion.div

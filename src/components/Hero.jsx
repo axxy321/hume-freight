@@ -12,6 +12,7 @@ const Hero = () => {
                     loop
                     muted
                     playsInline
+                    preload="metadata"
                     className="hero-video-bg"
                 >
                     <source src="/images/hero-truck-video.mp4" type="video/mp4" />

@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { supabase } from './lib/supabaseClient';
 import Hero from './components/Hero';
-import Services from './components/Services';
-import Testimonials from './components/Testimonials';
-import Partners from './components/Partners';
-import About from './components/About';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
-import Locations from './components/Locations';
 import Navbar from './components/Navbar';
-import QuoteSection from './components/QuoteSection';
-import AdminLogin from './components/admin/AdminLogin';
-import AdminDashboard from './components/admin/AdminDashboard';
 import './index.css';
+
+// Lazy load all below-the-fold components for faster initial load
+const About = lazy(() => import('./components/About'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const Services = lazy(() => import('./components/Services'));
+const Partners = lazy(() => import('./components/Partners'));
+const Locations = lazy(() => import('./components/Locations'));
+const QuoteSection = lazy(() => import('./components/QuoteSection'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const Footer = lazy(() => import('./components/Footer'));
+const AdminLogin = lazy(() => import('./components/admin/AdminLogin'));
+const AdminDashboard = lazy(() => import('./components/admin/AdminDashboard'));
 
 const MainSite = () => {
   return (
@@ -21,15 +23,19 @@ const MainSite = () => {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Testimonials />
-        <Services />
-        <Partners />
-        <Locations />
-        <QuoteSection />
-        <FAQ />
+        <Suspense fallback={null}>
+          <About />
+          <Testimonials />
+          <Services />
+          <Partners />
+          <Locations />
+          <QuoteSection />
+          <FAQ />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };

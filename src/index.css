@@ -28,6 +28,10 @@
   --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -42,6 +46,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  text-rendering: optimizeSpeed;
 }
 
 h1,
@@ -94,9 +99,8 @@ ul {
 }
 
 .glass-panel {
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  /* Replaced backdrop-filter (huge GPU cost) with solid background */
+  background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--glass-border);
   border-radius: 1px;
 }
@@ -140,10 +144,12 @@ ul {
   font-size: 0.9rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: var(--transition-normal);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 4px;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .btn-primary {
