@@ -80,7 +80,7 @@ const Footer = () => {
                         </a>
                         <div className="hotline mt-20">
                             <span className="kicker accent-text">24/7 Hotline</span>
-                            <p className="footer-phone">+61 482 086 541</p>
+                            <p className="footer-phone">1800 497 107</p>
                         </div>
                     </motion.div>
 

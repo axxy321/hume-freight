@@ -101,7 +101,7 @@ const QuoteSection = () => {
                                 </div>
                                 <div className="contact-card">
                                     <h4>Call Us Instead</h4>
-                                    <p>+61 482 086 541</p>
+                                    <p>1800 497 107</p>
                                     <span>Available 24/7 for urgent freight</span>
                                 </div>
                             </div>
